@@ -5,13 +5,6 @@ require __DIR__ . '/vendor/autoload.php';
 use Risonaldo\CursoPooPhp\PessoaFisica;
 
 
-$pessoaFisica = new PessoaFisica();
-
-$pessoaFisica->setNome('Risonaldo');
-$pessoaFisica->setSobrenome('Maciel');
-$pessoaFisica->setEmail('risonaldomaciel@hotmail.com');
-$pessoaFisica->setCpf('12345678910');
-$pessoaFisica->setIdade(31);
-$pessoaFisica->setTelefone('123456789');
+$pessoaFisica = new PessoaFisica('Risonaldo', 'Maciel', 'risonaldomaciel@hotmail.com', '123456789', '12345678910', 31);
 
 dump($pessoaFisica);

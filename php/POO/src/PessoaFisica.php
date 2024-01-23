@@ -13,28 +13,19 @@ class PessoaFisica
     private string $cpf;
     private int $idade;
 
-    public function setNome(string $nome): void
-    {
+    public function __construct(
+        string $nome,
+        string $sobrenome,
+        string $email,
+        string $telefone,
+        string $cpf,
+        int $idade
+    ) {
         $this->nome = $nome;
-    }
-    public function setSobreNome(string $sobrenome): void
-    {
         $this->sobrenome = $sobrenome;
-    }
-    public function setEmail(string $email): void
-    {
         $this->email = $email;
-    }
-    public function setTelefone(string $telefone): void
-    {
         $this->telefone = $telefone;
-    }
-    public function setCpf(string $cpf): void
-    {
         $this->cpf = $cpf;
-    }
-    public function setIdade(int $idade): void
-    {
         $this->idade = $idade;
     }
 }
