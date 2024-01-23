@@ -6,7 +6,9 @@ namespace Risonaldo\CursoPooPhp;
 
 class PessoaFisica
 {
-    private string $nome;
+    const OBJECT_TYPE = 'Ser humano';
+
+    private static string $nome;
     private string $sobrenome;
     private string $email;
     private string $telefone;
@@ -21,11 +23,16 @@ class PessoaFisica
         string $cpf,
         int $idade
     ) {
-        $this->nome = $nome;
+        self::$nome = $nome;
         $this->sobrenome = $sobrenome;
         $this->email = $email;
         $this->telefone = $telefone;
         $this->cpf = $cpf;
         $this->idade = $idade;
+    }
+
+    public static function getInformacao(): string
+    {
+        return self::$nome . " - " . self::OBJECT_TYPE;
     }
 }
