@@ -3,15 +3,21 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Risonaldo\CursoPooPhp\PessoaFisica;
+use Risonaldo\CursoPooPhp\PessoaJuridica;
 
+$risonaldo = new PessoaFisica;
 
-$pessoaFisica = new PessoaFisica(
-    'Risonaldo',
-    'Maciel',
-    'risonaldomaciel@hotmail.com',
-    '123456789',
-    '12345678910',
-    31
-);
+$risonaldo->name = "Risonaldo";
+$risonaldo->age = 30;
+$risonaldo->gender = "M";
 
-dump($pessoaFisica->getInformacao());
+$juridica = new PessoaJuridica;
+
+$juridica->name = "Juridica";
+$juridica->cnpj = "123456789123";
+
+// if ($juridica instanceof PessoaFisica) {
+//     dump("É pessoa Fisica");
+// } else {
+//     dump("É pessoa Juridica");
+// }
