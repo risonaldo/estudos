@@ -11,8 +11,8 @@ class Router
 
     public function __construct($url)
     {
-        $this->request = new Request();
         $this->url = $url;
+        $this->request = new Request();
         $this->setPrefix();
     }
 
@@ -20,8 +20,6 @@ class Router
     {
         $parseUrl = parse_url($this->url);
 
-        echo "<pre>";
-        print_r($parseUrl);
-        echo "</pre>";
+        $this->prefix = $parseUrl['path'] ?? '';
     }
 }
