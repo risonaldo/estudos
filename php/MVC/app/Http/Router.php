@@ -22,4 +22,13 @@ class Router
 
         $this->prefix = $parseUrl['path'] ?? '';
     }
+    private function addRoute($method, $route, $params = [])
+    {
+        
+    }
+
+    public function get($route, $params = [])
+    {
+        $this->addRoute('GET',$route, $params);
+    }
 }
